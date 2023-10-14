@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+I7x2tq5m7hRzp/+38CS1Dyh3T7q8f6Rd5dg5F5Sr5Pj0K4C" crossorigin="anonymous">
+    <title>Especialidades</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+              <a class="navbar-brand" href="index.html">Principal</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Quienes Somos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="especialidades.html">Especialidades</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Inscripcion.html">Inscripción</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Conócenos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="row justify-content-center align-items-center">
+            <div class=" cols-12 col-md-6 text-center " style="margin-bottom: 50px;  ">
+              <section class="mb-4 " style="display: flex; justify-content: center;"  >
+                  <div style="width: 90%;
+                            display: flex;
+                            font-size: 12px;
+                            border: 2px solid #999494;
+                            border-radius: 25px;
+                            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+                            justify-content: space-between;
+                            align-items: center;
+                            flex-direction: column-reverse;" >
+                      <div style="width: 80%;">
+                        <form id="formulario" onsubmit="return validarFormulario()">
+                            <h3>Inscripción</h3>
+                        <br>
+                        <label for="nombre">Nombre completo:</label>
+                        <br>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <br>
+                        <label for="telefono">Teléfono:</label>
+                        <br>
+                        <input type="tel" id="telefono" name="telefono" required>
+                        <br>
+                        <label for="Edad">Edad:</label>
+                        <br>
+                        <input type="number" id="edad" name="edad" required>
+                        <br>
+                        <label for="ciudad">DUI:</label>
+                        <br>
+                        <input type="text" id="ciudad" name="ciudad" required>
+                        <br>
+                        <label for="ciudad">Dirección:</label>
+                        <br>
+                        <input type="text" id="ciudad" name="ciudad" required>
+                        <br>
+                        <label for="especialidades">Especialidad:</label>
+                        <br>
+                        <input type="text id="especialidades" name="especialidades"  list="especialidad" required>
+                        <br>
+                        <datalist id="especialidad">
+                            <option value="Programador Analista">
+                            <option value="Diseño Gráfico">
+                            <option value="Ingles">
+                            <option value="Master en Office">
+                            <option value="Asistente administrativa">
+                            <option value="Electricidad">
+                            <option value="ingles Kids">
+                            <option value="Soldadura eléctrica">
+                            <option value="Mantenimiento de Pc">
+                            <option value="Marketing digital">
+                        </datalist>
+                        
+                        <button type="submit" style="margin-top: 20px; margin-bottom: 20px;">
+                            Inscribirse
+                        </button>
+                        </form>
+                      </div>
+                  </div>
+                  <script>
+                    function validarFormulario() {
+                      var nombre = document.getElementById("nombre").value;
+                      var telefono = document.getElementById("telefono").value;
+                      var edad = document.getElementById("edad").value;
+                      var ciudad = document.getElementById("ciudad").value;
+                      var direccion = document.getElementById("direccion").value;
+                      var especialidades = document.getElementById("especialidades").value;
+                
+                      if (!nombre || !telefono || !edad || !ciudad || !direccion || !especialidades) {
+                        alert("Por favor, complete todos los campos requeridos.");
+                        return false; // Evita que se envíe el formulario si falta información.
+                      }
+                      return true; // El formulario se envía si todos los campos requeridos están completos.
+                    }
+                  </script>
+              </section>
+          </div>
+    </main>
+    
+</body>
+</html>
